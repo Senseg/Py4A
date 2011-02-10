@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="r1"
+VERSION="$(cat VERSION)"
 
 ndk-build
 rm -rf out

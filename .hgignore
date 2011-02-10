@@ -28,6 +28,8 @@ python/.*\.pyc
 (python|lua)/.*\.so
 (python|lua)/.*\.a
 android/.*/(bin|gen)/.*
+python-modules/.*/(libs|obj|out)
+python-modules/.*/.*\.zip
 android/.metadata/
 python-build/output
 python-build/host
