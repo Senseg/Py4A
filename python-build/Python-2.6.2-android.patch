@@ -1488,3 +1488,18 @@ diff --ignore-file-name-case -wuprN Python-2.6.2/Modules/_localemodule.c python-
      return NULL;
  }
  
+--- Python-2.6.2/Modules/main.c	2009-02-19 01:12:48.000000000 +0200
++++ Python-2.6.2/Modules/main.c	2012-05-22 21:32:42.000000000 +0300
+@@ -112,9 +112,9 @@
+ 	if (exitcode)
+ 		fprintf(f, "Try `python -h' for more information.\n");
+ 	else {
+-		fprintf(f, usage_1);
+-		fprintf(f, usage_2);
+-		fprintf(f, usage_3);
++		fputs(usage_1, f);
++		fputs(usage_2, f);
++		fputs(usage_3, f);
+ 		fprintf(f, usage_4, DELIM);
+ 		fprintf(f, usage_5, DELIM, PYTHONHOMEHELP);
+ 	}

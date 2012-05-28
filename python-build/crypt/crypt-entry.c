@@ -134,7 +134,7 @@ __crypt_r (const char *key, const char *salt, struct crypt_data * __restrict dat
   _ufc_output_conversion_r (res[0], res[1], salt, data);
   return data->crypt_3_buf;
 }
-weak_alias (__crypt_r, crypt_r)
+__weak_alias (__crypt_r, crypt_r)
 
 char * crypt (const char *key, const char *salt)
 {
@@ -161,7 +161,7 @@ char * crypt (const char *key, const char *salt)
  * They don't need to call init_des.
  */
 #ifdef _LIBC
-weak_alias (crypt, fcrypt)
+__weak_alias (crypt, fcrypt)
 #else
 char *
 __fcrypt (key, salt)

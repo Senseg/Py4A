@@ -872,7 +872,7 @@ __encrypt_r(__block, __edflag, __data)
     *__block++ = (r1 & longmask[i]) != 0;
   }
 }
-weak_alias (__encrypt_r, encrypt_r)
+__weak_alias (__encrypt_r, encrypt_r)
 
 void
 encrypt(__block, __edflag)
@@ -906,7 +906,7 @@ __setkey_r(__key, __data)
   }
   _ufc_mk_keytab_r((char *) ktab, __data);
 }
-weak_alias (__setkey_r, setkey_r)
+__weak_alias (__setkey_r, setkey_r)
 
 void
 setkey(__key)
