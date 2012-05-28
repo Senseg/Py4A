@@ -2,10 +2,13 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-PYTHON_SRC_PATH := $(LOCAL_PATH)/../python-src
+PYTHON_SRC_PATH := $(python_src_dir)
+LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := $(PYTHON_SRC_PATH) $(PYTHON_SRC_PATH)/Include
 LOCAL_PATH := $(PYTHON_SRC_PATH)
 LOCAL_CFLAGS := -DPYTHONPATH='""' -DVERSION='"2.6"' -DENABLE_IPV6
+LOCAL_SHARED_LIBRARIES := libdl
+LOCAL_PRELINK_MODULE := false
 LOCAL_SRC_FILES := \
 		Parser/acceler.c \
 		Parser/grammar1.c \
@@ -116,7 +119,7 @@ LOCAL_SRC_FILES := \
 		Modules/gcmodule.c \
 		Modules/getbuildinfo.c
 
-LOCAL_MODULE := python2.6
+LOCAL_MODULE := libpython2.6
 #LOCAL_MODULE_FILENAME := 
 
 $(call __ndk_info, Building libpython2.6)

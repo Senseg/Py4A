@@ -2,8 +2,10 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := _crypt
+LOCAL_MODULE := libcrypt
+LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_FILENAME := libcrypt
+LOCAL_PRELINK_MODULE := false
 LOCAL_SRC_FILES := crypt.c \
 	des.c \
 	md5.c

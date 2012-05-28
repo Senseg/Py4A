@@ -105,7 +105,7 @@ LOCAL_PATH := $(PYTHON_SRC_PATH)
 LOCAL_MODULE := crypt
 LOCAL_MODULE_FILENAME := crypt
 LOCAL_SRC_FILES := Modules/cryptmodule.c
-LOCAL_SHARED_LIBRARIES := libpython2.6 _crypt
+LOCAL_SHARED_LIBRARIES := libpython2.6 libcrypt
 include $(BUILD_SHARED_LIBRARY)
 
 

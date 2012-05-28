@@ -19,8 +19,10 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := ffi
+LOCAL_MODULE := libffi
+LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_FILENAME := 
+LOCAL_PRELINK_MODULE := false
 LOCAL_SRC_FILES := src/arm/sysv.S \
 	src/arm/ffi.c \
 	src/debug.c \
@@ -30,6 +32,7 @@ LOCAL_SRC_FILES := src/arm/sysv.S \
 	src/types.c
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include $(LOCAL_PATH)/linux-arm
+LOCAL_CFLAGS := -D__SOFTFP__
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
 
 $(call __ndk_info, Building libffi)
