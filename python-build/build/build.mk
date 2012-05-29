@@ -152,6 +152,7 @@ $(python_grammar_marker): $(python_src_marker) $(host_pgen_install_marker)
 # Unpack and patch the Python grammar for Android
 # TODO: Replace with a proper git repo instead of downloading and patching
 $(python_src_marker): $(python_tarball) $(python_patch)
+	$(hide) rm -rf $(python_work_dir)
 	$(hide) mkdir -p $(python_work_dir)
 	$(hide) (cd $(python_work_dir);  tar -xjf $(CURDIR)/$(python_tarball) )
 	$(hide) (cd $(python_src_dir); patch -p1 -i $(CURDIR)/$(python_patch) )
