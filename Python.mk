@@ -4,7 +4,7 @@
 
 # Python
 PRODUCT_PACKAGES += \
-     host_pgen python-build \
+     host_pgen python \
      libbz libcrypt libffi libpython2.6 \
      _struct _ctypes_test _weakref array cmath math strop time datetime itertools \
      future_builtins _random _collections _bisect _heapq operator \
@@ -13,5 +13,3 @@ PRODUCT_PACKAGES += \
      _csv _socket _sha _md5 _sha256 _sha512 termios resource binascii \
      _bultibytecode _codecs_kr _codecs_jp _codecs_cn _codecs_tw _codecs_hk \
      _codecs_iso2022 _multiprocessing
-
- 
