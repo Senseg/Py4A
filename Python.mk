@@ -12,4 +12,5 @@ PRODUCT_PACKAGES += \
      _local fcntl select parser cStringIO cPcikle mmap syslog audioop imageop \
      _csv _socket _sha _md5 _sha256 _sha512 termios resource binascii \
      _bultibytecode _codecs_kr _codecs_jp _codecs_cn _codecs_tw _codecs_hk \
-     _codecs_iso2022 _multiprocessing
+     _codecs_iso2022 _multiprocessing \
+     bz2 zlib crypt pyexpat _elementtree _ssl _ctypes _sqlite3
