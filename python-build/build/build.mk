@@ -116,6 +116,8 @@ python_library_src_marker := $(python_library_dir)/compileall.py
 python_grammar_marker     := $(python_src_dir)/Include/graminit.h
 python_src_marker         := $(python_src_dir)/Modules/config.c
 
+$(LOCAL_BUILT_MODULE): $(python_install_marker)
+
 # Install the Python packages, compiled by the host Python
 # TODO: The following rule is currently an ugly hack.  Fix.
 $(python_install_marker): $(python_library_obj_marker)
