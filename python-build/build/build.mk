@@ -181,6 +181,7 @@ include $(BUILD_EXECUTABLE)
 $(python_src_dir)/Modules/python.c: $(python_src_marker)
 $(python_src_dir)/Parser/acceler.c: $(python_src_marker)
 $(python_src_dir)/Parser/grammar1.c: $(python_src_marker)
+$(python_src_dir)/Parser/listnode.c: $(python_src_marker)
 
 $(LOCAL_INSTALLED_MODULE): $(python_install_marker)
 
